@@ -17,10 +17,7 @@ OK 2. Add an input field to the HTML where players can set the winning score, so
 */
 var scores, roundscore, activeplayer, playerpoints, gameplaying, record;
 
-
 init();
-
-
 
 function nextplayer(){
     activeplayer === 0 ? activeplayer = 1 : activeplayer = 0;
@@ -34,7 +31,6 @@ function nextplayer(){
 
 
 }
-
 
 document.querySelector('.btn-roll').addEventListener('click', function (){
      if (gameplaying){
@@ -66,8 +62,6 @@ document.querySelector('.btn-roll').addEventListener('click', function (){
     }
 });
 
-
-
 document.querySelector('.btn-hold').addEventListener('click', function (){
     if (gameplaying){
         // add current score
@@ -94,8 +88,8 @@ document.querySelector('.btn-hold').addEventListener('click', function (){
         }
     }
 });
-document.querySelector('.btn-new').addEventListener('click', init);
 
+document.querySelector('.btn-new').addEventListener('click', init);
 
 function init(){
     scores = [0, 0];
@@ -123,7 +117,6 @@ function init(){
     
     var record = document.getElementById('record').value = ""; 
 }
-
 
 function won () {
     document.getElementById('name-'+activeplayer).textContent = 'WINNER';
